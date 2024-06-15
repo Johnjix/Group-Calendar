@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import {
   FontAwesomeModule,
   IconDefinition,
@@ -13,7 +14,7 @@ import {
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule, RouterLink, RouterLinkActive],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',
 })

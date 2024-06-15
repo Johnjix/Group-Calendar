@@ -1,9 +1,15 @@
 <nav class="nav-container">
-  <fa-icon class="nav-container__home" [icon]="faHouse" [size]="'xl'"></fa-icon>
+  <fa-icon
+    class="nav-container__home"
+    [icon]="faHouse"
+    [size]="'xl'"
+    routerLink="/home"
+  ></fa-icon>
   <fa-icon
     class="nav-container__calendar"
     [icon]="faCalendarDays"
     [size]="'xl'"
+    routerLink="/calendar"
   ></fa-icon>
   <fa-icon
     class="nav-container__user"
