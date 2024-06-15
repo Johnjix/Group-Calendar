@@ -3,11 +3,13 @@ import { RouterOutlet } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faHouse } from '@fortawesome/free-solid-svg-icons';
+import { NavComponent } from './components/nav/nav.component';
 
+const components = [NavComponent];
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MatButtonModule, FontAwesomeModule],
+  imports: [RouterOutlet, MatButtonModule, FontAwesomeModule, ...components],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
