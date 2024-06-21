@@ -114,7 +114,11 @@
             "browserTarget": "group-calendar:build",
             "compodoc": true,
             "compodocArgs": ["-e", "json", "-d", "."],
-            "outputDir": "storybook-static"
+            "outputDir": "storybook-static",
+            "styles": [
+              "@angular/material/prebuilt-themes/magenta-violet.css",
+              "src/styles/styles.scss"
+            ]
           }
         }
       }
