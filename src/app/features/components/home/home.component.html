@@ -1,7 +1,9 @@
-<section class="home-container">
-  <mat-card>
-    <mat-card-content>
-      <h1>{{ todaysDate | date : "fullDate" }}</h1>
+<section class="container">
+  <mat-card class="container__card">
+    <mat-card-content class="container__card__content">
+      <h1 class="container__card__content__header">
+        {{ todaysDate | date: "fullDate" }}
+      </h1>
     </mat-card-content>
   </mat-card>
 </section>

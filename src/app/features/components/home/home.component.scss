@@ -1,0 +1,12 @@
+.container {
+  &__card {
+    background-color: #311b92;
+    background-image: linear-gradient(152deg, #57c2a3, #311b92);
+    &__content {
+      &__header {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
