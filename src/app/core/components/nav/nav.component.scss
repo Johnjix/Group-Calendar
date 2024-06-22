@@ -11,19 +11,47 @@
   bottom: 0;
   width: 100%;
 
-  &__home {
-    @extend .button-padding;
-  }
-
-  &__calendar {
-    @extend .button-padding;
-  }
-
+  &__home,
+  &__calendar,
   &__user {
     @extend .button-padding;
+    @extend .hover;
   }
 }
 
 .button-padding {
   padding: 0.5rem 1rem 0.5rem 1rem;
+}
+.hover {
+  cursor: pointer;
+}
+.neon-glow {
+  color: #fff;
+  filter: drop-shadow(0 0 7px #fff) drop-shadow(0 0 10px #fff)
+    drop-shadow(0 0 21px #fff) drop-shadow(0 0 42px #0fa)
+    drop-shadow(0 0 82px #0fa) drop-shadow(0 0 92px #0fa)
+    drop-shadow(0 0 102px #0fa) drop-shadow(0 0 151px #0fa);
+
+  animation: neon-glow-animation 2.5s infinite alternate;
+}
+
+@keyframes neon-glow-animation {
+  0% {
+    filter: drop-shadow(0 0 7px #fff) drop-shadow(0 0 10px #fff)
+      drop-shadow(0 0 21px #fff) drop-shadow(0 0 42px #0fa)
+      drop-shadow(0 0 82px #0fa) drop-shadow(0 0 92px #0fa)
+      drop-shadow(0 0 102px #0fa) drop-shadow(0 0 151px #0fa);
+  }
+  50% {
+    filter: drop-shadow(0 0 14px #fff) drop-shadow(0 0 20px #fff)
+      drop-shadow(0 0 42px #fff) drop-shadow(0 0 84px #0fa)
+      drop-shadow(0 0 164px #0fa) drop-shadow(0 0 184px #0fa)
+      drop-shadow(0 0 204px #0fa) drop-shadow(0 0 302px #0fa);
+  }
+  100% {
+    filter: drop-shadow(0 0 7px #fff) drop-shadow(0 0 10px #fff)
+      drop-shadow(0 0 21px #fff) drop-shadow(0 0 42px #0fa)
+      drop-shadow(0 0 82px #0fa) drop-shadow(0 0 92px #0fa)
+      drop-shadow(0 0 102px #0fa) drop-shadow(0 0 151px #0fa);
+  }
 }

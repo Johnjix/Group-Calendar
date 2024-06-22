@@ -14,7 +14,9 @@ const preview: Preview = {
   },
   decorators: [
     componentWrapperDecorator(
-      (story) => `<div class="mat-app-background mat-typography">
+      (
+        story,
+      ) => `<div class="mat-app-background mat-typography" style="margin: 2rem;">
     ${story}
   </div>`,
     ),

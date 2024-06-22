@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import {
   FontAwesomeModule,
@@ -17,9 +17,10 @@ import {
   imports: [FontAwesomeModule, RouterLink, RouterLinkActive],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',
+  encapsulation: ViewEncapsulation.None,
 })
 export class NavComponent {
-  faHouse: IconDefinition = faHouse;
-  faCalendarDays: IconDefinition = faCalendarDays;
-  faUserAstronaut: IconDefinition = faUserAstronaut;
+  protected faHouse: IconDefinition = faHouse;
+  protected faUserAstronaut: IconDefinition = faUserAstronaut;
+  protected faCalendarDays: IconDefinition = faCalendarDays;
 }

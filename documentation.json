@@ -272,6 +272,66 @@
             "templateData": "<p>calendar works!</p>\r\n"
         },
         {
+            "name": "DayEventsDisplayComponent",
+            "id": "component-DayEventsDisplayComponent-27e2ecc1bb415de10dc33af941d3874c06e8880bfeb16a7b6ef49a14de73590c04145824bfad9876adb992b82e4b1ee18d834a5eddf38642fd4c99ecd31691bd",
+            "file": "src/app/features/components/day-events-display/day-events-display.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-day-events-display",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./day-events-display.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "dateOfEvent",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "Date",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-day-events-display',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './day-events-display.component.html',\r\n  styleUrl: './day-events-display.component.scss',\r\n})\r\nexport class DayEventsDisplayComponent {\r\n  @Input() dateOfEvent!: Date;\r\n\r\n  constructor() {}\r\n}\r\n",
+            "styleUrl": "./day-events-display.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 12
+            },
+            "extends": [],
+            "templateData": "<section class=\"container\">\r\n  <div class=\"container__day-header\">{{ dateOfEvent | date: \"EEE\" }}</div>\r\n  <div class=\"container__day-events\">TEST</div>\r\n</section>\r\n"
+        },
+        {
             "name": "HeaderComponent",
             "id": "component-HeaderComponent-cad94b233ec8e80ceb541e7972c5f9737e08237b4e137112f3987ca48ee0cce5c0d57798d41daa5d4d24d6bdbb2df1606ab68cca2aa0a1785e38f99f3cac0729",
             "file": "src/stories/header.component.ts",
@@ -420,13 +480,15 @@
                 "line": 13
             },
             "extends": [],
-            "templateData": "<section class=\"home-container\">\r\n  <mat-card>\r\n    <mat-card-content>\r\n      <h1>{{ todaysDate | date : \"fullDate\" }}</h1>\r\n    </mat-card-content>\r\n  </mat-card>\r\n</section>\r\n"
+            "templateData": "<section class=\"container\">\r\n  <mat-card class=\"container__card\">\r\n    <mat-card-content class=\"container__card__content\">\r\n      <h1 class=\"container__card__content__header\">\r\n        {{ todaysDate | date: \"fullDate\" }}\r\n      </h1>\r\n    </mat-card-content>\r\n  </mat-card>\r\n</section>\r\n"
         },
         {
             "name": "NavComponent",
-            "id": "component-NavComponent-8205ddd7133dee944ca19063a337eff606ba79e0899d334e46b002b3b37561167883ab60234e6c84610b56f665a1a82062335eb4c2e2f959b6f8026cded0d006",
+            "id": "component-NavComponent-8b012c0f66d9c1ee523324cf743eeeeb965095d8e00da0a102f6ab33708a5eb3a171b343497bf2425e36a17d30a43336a12ec306fa01c6372286cebe39edc5d7",
             "file": "src/app/core/components/nav/nav.component.ts",
-            "encapsulation": [],
+            "encapsulation": [
+                "ViewEncapsulation.None"
+            ],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
@@ -450,7 +512,10 @@
                     "type": "IconDefinition",
                     "optional": false,
                     "description": "",
-                    "line": 23
+                    "line": 25,
+                    "modifierKind": [
+                        124
+                    ]
                 },
                 {
                     "name": "faHouse",
@@ -460,7 +525,10 @@
                     "type": "IconDefinition",
                     "optional": false,
                     "description": "",
-                    "line": 22
+                    "line": 23,
+                    "modifierKind": [
+                        124
+                    ]
                 },
                 {
                     "name": "faUserAstronaut",
@@ -470,7 +538,10 @@
                     "type": "IconDefinition",
                     "optional": false,
                     "description": "",
-                    "line": 24
+                    "line": 24,
+                    "modifierKind": [
+                        124
+                    ]
                 }
             ],
             "methodsClass": [],
@@ -494,13 +565,13 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\nimport { RouterLink, RouterLinkActive } from '@angular/router';\r\nimport {\r\n  FontAwesomeModule,\r\n  IconDefinition,\r\n} from '@fortawesome/angular-fontawesome';\r\nimport {\r\n  faCalendar,\r\n  faCalendarDays,\r\n  faHouse,\r\n  faUserAstronaut,\r\n} from '@fortawesome/free-solid-svg-icons';\r\n\r\n@Component({\r\n  selector: 'app-nav',\r\n  standalone: true,\r\n  imports: [FontAwesomeModule, RouterLink, RouterLinkActive],\r\n  templateUrl: './nav.component.html',\r\n  styleUrl: './nav.component.scss',\r\n})\r\nexport class NavComponent {\r\n  faHouse: IconDefinition = faHouse;\r\n  faCalendarDays: IconDefinition = faCalendarDays;\r\n  faUserAstronaut: IconDefinition = faUserAstronaut;\r\n}\r\n",
+            "sourceCode": "import { Component, ViewEncapsulation } from '@angular/core';\r\nimport { RouterLink, RouterLinkActive } from '@angular/router';\r\nimport {\r\n  FontAwesomeModule,\r\n  IconDefinition,\r\n} from '@fortawesome/angular-fontawesome';\r\nimport {\r\n  faCalendar,\r\n  faCalendarDays,\r\n  faHouse,\r\n  faUserAstronaut,\r\n} from '@fortawesome/free-solid-svg-icons';\r\n\r\n@Component({\r\n  selector: 'app-nav',\r\n  standalone: true,\r\n  imports: [FontAwesomeModule, RouterLink, RouterLinkActive],\r\n  templateUrl: './nav.component.html',\r\n  styleUrl: './nav.component.scss',\r\n  encapsulation: ViewEncapsulation.None,\r\n})\r\nexport class NavComponent {\r\n  protected faHouse: IconDefinition = faHouse;\r\n  protected faUserAstronaut: IconDefinition = faUserAstronaut;\r\n  protected faCalendarDays: IconDefinition = faCalendarDays;\r\n}\r\n",
             "styleUrl": "./nav.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<nav class=\"nav-container\">\r\n  <fa-icon\r\n    class=\"nav-container__home\"\r\n    [icon]=\"faHouse\"\r\n    [size]=\"'xl'\"\r\n    routerLink=\"/home\"\r\n  ></fa-icon>\r\n  <fa-icon\r\n    class=\"nav-container__calendar\"\r\n    [icon]=\"faCalendarDays\"\r\n    [size]=\"'xl'\"\r\n    routerLink=\"/calendar\"\r\n  ></fa-icon>\r\n  <fa-icon\r\n    class=\"nav-container__user\"\r\n    [icon]=\"faUserAstronaut\"\r\n    [size]=\"'xl'\"\r\n  ></fa-icon>\r\n</nav>\r\n"
+            "templateData": "<nav class=\"nav-container\">\r\n  <fa-icon\r\n    class=\"nav-container__home\"\r\n    [icon]=\"faHouse\"\r\n    [size]=\"'xl'\"\r\n    routerLink=\"/home\"\r\n    routerLinkActive=\"neon-glow\"\r\n  ></fa-icon>\r\n  <fa-icon\r\n    class=\"nav-container__calendar\"\r\n    [icon]=\"faCalendarDays\"\r\n    [size]=\"'xl'\"\r\n    routerLink=\"/calendar\"\r\n    routerLinkActive=\"neon-glow\"\r\n  ></fa-icon>\r\n  <fa-icon\r\n    class=\"nav-container__user\"\r\n    [icon]=\"faUserAstronaut\"\r\n    [size]=\"'xl'\"\r\n  ></fa-icon>\r\n</nav>\r\n"
         },
         {
             "name": "PageComponent",
@@ -655,7 +726,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 8,
+        "count": 7,
         "status": "low",
         "files": [
             {
@@ -703,6 +774,15 @@
                 "name": "CalendarComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/components/day-events-display/day-events-display.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DayEventsDisplayComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
