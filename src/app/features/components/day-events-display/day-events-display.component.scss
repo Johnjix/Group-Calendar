@@ -4,5 +4,21 @@
   box-shadow: indigo;
   &__header {
     display: block;
+    text-align: center;
+
+    &__date-location-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
+
+  &__content {
+    &__attendees {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 2rem;
+    }
   }
 }

@@ -1,16 +1,22 @@
-<!-- <section class="container">
-  <div class="container__day-header">{{ dateOfEvent | date: "EEE" }}</div>
-  <div class="container__day-events">TEST</div>
-</section> -->
 <mat-card class="card">
   <mat-card-header class="card__header">
-    <h3>Johnjix Bautista Reyes</h3>
-    <h4>Event Name</h4>
+    <h3>{{ organiser }}</h3>
+    <h4>{{ eventName }}</h4>
+    <div class="card__header__date-location-group">
+      <h6>Date: {{ dateOfEvent | date }}</h6>
+      <h6>Location: {{ eventLocation }}</h6>
+    </div>
   </mat-card-header>
-  <mat-card-content>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, consectetur!
-    Ipsa, quos aliquid. Praesentium, libero! Tenetur, sed! Est optio nam
-    quibusdam suscipit culpa? Inventore voluptate, laboriosam a excepturi sit
-    deserunt!
+  <mat-card-content class="card__content">
+    <strong>Attendees: {{ totalNumberOfAttendees }}</strong>
+    <div class="card__content__attendees">
+      @for (attendee of attendees; track $index) {
+        <app-user-pill
+          [userName]="attendee.Name"
+          [plusOneCount]="attendee.PlusOneCount"
+          [colourScheme]="attendee.colourScheme"
+        ></app-user-pill>
+      }
+    </div>
   </mat-card-content>
 </mat-card>

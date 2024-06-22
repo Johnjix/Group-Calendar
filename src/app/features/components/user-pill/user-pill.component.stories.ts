@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { UserPillComponent } from './user-pill.component';
 import { getRandomMaterialColorScheme } from '../../../shared/generateRandomMaterialColorScheme';
+import { faker } from '@faker-js/faker';
 
 const meta: Meta<UserPillComponent> = {
   title: 'User Pill',
@@ -33,22 +34,29 @@ type Story = StoryObj<UserPillComponent>;
 
 export const Colour1: Story = {
   args: {
-    userName: 'Johnjix Bautista Reyes',
+    userName: faker.person.fullName(),
     colourScheme: getRandomMaterialColorScheme(),
-    plusOneCount: 6,
+    plusOneCount: faker.number.int(12),
   },
 };
 export const Colour2: Story = {
   args: {
-    userName: 'Johnjix Bautista Reyes',
+    userName: faker.person.fullName(),
     colourScheme: getRandomMaterialColorScheme(),
-    plusOneCount: 2,
+    plusOneCount: faker.number.int(12),
   },
 };
 export const Colour3: Story = {
   args: {
-    userName: 'Johnjix Bautista Reyes',
+    userName: faker.person.fullName(),
     colourScheme: getRandomMaterialColorScheme(),
-    plusOneCount: 10,
+    plusOneCount: faker.number.int(12),
+  },
+};
+export const NoPlusOnes: Story = {
+  args: {
+    userName: faker.person.fullName(),
+    colourScheme: getRandomMaterialColorScheme(),
+    plusOneCount: 0,
   },
 };
