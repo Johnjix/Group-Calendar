@@ -1,0 +1,23 @@
+.container {
+  padding: 1rem 2rem;
+  width: fit-content;
+  width: -moz-fit-content;
+  border-radius: 23px;
+  font-weight: 700;
+}
+.mat-badge-extra-large .mat-badge-content {
+  width: min-content;
+  height: min-content;
+  font-size: 16px;
+  padding: 0.5rem 1rem;
+
+  font-weight: 700;
+  line-height: 32px;
+
+  top: -5px; /* Adjust as needed */
+  right: 1px; /* Adjust as needed */
+}
+
+.mat-badge-extra-large {
+  position: relative;
+}

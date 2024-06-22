@@ -1,0 +1,9 @@
+<section
+  class="container mat-badge-extra-large"
+  [style.background-color]="colourScheme.backgroundColor"
+  [style.color]="colourScheme.color"
+  [matBadge]="plusOneCount > 0 ? '+' + plusOneCount : ''"
+  matBadgeSize="large"
+>
+  <span>{{ userName }}</span>
+</section>

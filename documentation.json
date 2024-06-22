@@ -2,6 +2,39 @@
     "pipes": [],
     "interfaces": [
         {
+            "name": "MaterialColorScheme",
+            "id": "interface-MaterialColorScheme-834bfcef40c9ecf9bf033f955c5c3f9450763ef829cd987174c2181ea9e9d8b89967b8d439db1c2a2b4c4d7c19510b387be27a23cc87081b6f6d0945933ccdd9",
+            "file": "src/app/shared/generateRandomMaterialColorScheme.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface MaterialColorScheme {\r\n  backgroundColor: string;\r\n  color: string;\r\n}\r\nexport function getRandomMaterialColorScheme(): MaterialColorScheme {\r\n  const materialColors: { [key: string]: string[] } = {\r\n    red: [\r\n      '#FFEBEE',\r\n      '#FFCDD2',\r\n      '#EF9A9A',\r\n      '#E57373',\r\n      '#EF5350',\r\n      '#F44336',\r\n      '#E53935',\r\n      '#D32F2F',\r\n      '#C62828',\r\n      '#B71C1C',\r\n      '#FF8A80',\r\n      '#FF5252',\r\n      '#FF1744',\r\n      '#D50000',\r\n    ],\r\n    pink: [\r\n      '#FCE4EC',\r\n      '#F8BBD0',\r\n      '#F48FB1',\r\n      '#F06292',\r\n      '#EC407A',\r\n      '#E91E63',\r\n      '#D81B60',\r\n      '#C2185B',\r\n      '#AD1457',\r\n      '#880E4F',\r\n      '#FF80AB',\r\n      '#FF4081',\r\n      '#F50057',\r\n      '#C51162',\r\n    ],\r\n    purple: [\r\n      '#F3E5F5',\r\n      '#E1BEE7',\r\n      '#CE93D8',\r\n      '#BA68C8',\r\n      '#AB47BC',\r\n      '#9C27B0',\r\n      '#8E24AA',\r\n      '#7B1FA2',\r\n      '#6A1B9A',\r\n      '#4A148C',\r\n      '#EA80FC',\r\n      '#E040FB',\r\n      '#D500F9',\r\n      '#AA00FF',\r\n    ],\r\n    deepPurple: [\r\n      '#EDE7F6',\r\n      '#D1C4E9',\r\n      '#B39DDB',\r\n      '#9575CD',\r\n      '#7E57C2',\r\n      '#673AB7',\r\n      '#5E35B1',\r\n      '#512DA8',\r\n      '#4527A0',\r\n      '#311B92',\r\n      '#B388FF',\r\n      '#7C4DFF',\r\n      '#651FFF',\r\n      '#6200EA',\r\n    ],\r\n    indigo: [\r\n      '#E8EAF6',\r\n      '#C5CAE9',\r\n      '#9FA8DA',\r\n      '#7986CB',\r\n      '#5C6BC0',\r\n      '#3F51B5',\r\n      '#3949AB',\r\n      '#303F9F',\r\n      '#283593',\r\n      '#1A237E',\r\n      '#8C9EFF',\r\n      '#536DFE',\r\n      '#3D5AFE',\r\n      '#304FFE',\r\n    ],\r\n    blue: [\r\n      '#E3F2FD',\r\n      '#BBDEFB',\r\n      '#90CAF9',\r\n      '#64B5F6',\r\n      '#42A5F5',\r\n      '#2196F3',\r\n      '#1E88E5',\r\n      '#1976D2',\r\n      '#1565C0',\r\n      '#0D47A1',\r\n      '#82B1FF',\r\n      '#448AFF',\r\n      '#2979FF',\r\n      '#2962FF',\r\n    ],\r\n    lightBlue: [\r\n      '#E1F5FE',\r\n      '#B3E5FC',\r\n      '#81D4FA',\r\n      '#4FC3F7',\r\n      '#29B6F6',\r\n      '#03A9F4',\r\n      '#039BE5',\r\n      '#0288D1',\r\n      '#0277BD',\r\n      '#01579B',\r\n      '#80D8FF',\r\n      '#40C4FF',\r\n      '#00B0FF',\r\n      '#0091EA',\r\n    ],\r\n    cyan: [\r\n      '#E0F7FA',\r\n      '#B2EBF2',\r\n      '#80DEEA',\r\n      '#4DD0E1',\r\n      '#26C6DA',\r\n      '#00BCD4',\r\n      '#00ACC1',\r\n      '#0097A7',\r\n      '#00838F',\r\n      '#006064',\r\n      '#84FFFF',\r\n      '#18FFFF',\r\n      '#00E5FF',\r\n      '#00B8D4',\r\n    ],\r\n    teal: [\r\n      '#E0F2F1',\r\n      '#B2DFDB',\r\n      '#80CBC4',\r\n      '#4DB6AC',\r\n      '#26A69A',\r\n      '#009688',\r\n      '#00897B',\r\n      '#00796B',\r\n      '#00695C',\r\n      '#004D40',\r\n      '#A7FFEB',\r\n      '#64FFDA',\r\n      '#1DE9B6',\r\n      '#00BFA5',\r\n    ],\r\n    green: [\r\n      '#E8F5E9',\r\n      '#C8E6C9',\r\n      '#A5D6A7',\r\n      '#81C784',\r\n      '#66BB6A',\r\n      '#4CAF50',\r\n      '#43A047',\r\n      '#388E3C',\r\n      '#2E7D32',\r\n      '#1B5E20',\r\n      '#B9F6CA',\r\n      '#69F0AE',\r\n      '#00E676',\r\n      '#00C853',\r\n    ],\r\n    lightGreen: [\r\n      '#F1F8E9',\r\n      '#DCEDC8',\r\n      '#C5E1A5',\r\n      '#AED581',\r\n      '#9CCC65',\r\n      '#8BC34A',\r\n      '#7CB342',\r\n      '#689F38',\r\n      '#558B2F',\r\n      '#33691E',\r\n      '#CCFF90',\r\n      '#B2FF59',\r\n      '#76FF03',\r\n      '#64DD17',\r\n    ],\r\n    lime: [\r\n      '#F9FBE7',\r\n      '#F0F4C3',\r\n      '#E6EE9C',\r\n      '#DCE775',\r\n      '#D4E157',\r\n      '#CDDC39',\r\n      '#C0CA33',\r\n      '#AFB42B',\r\n      '#9E9D24',\r\n      '#827717',\r\n      '#F4FF81',\r\n      '#EEFF41',\r\n      '#C6FF00',\r\n      '#AEEA00',\r\n    ],\r\n    yellow: [\r\n      '#FFFDE7',\r\n      '#FFF9C4',\r\n      '#FFF59D',\r\n      '#FFF176',\r\n      '#FFEE58',\r\n      '#FFEB3B',\r\n      '#FDD835',\r\n      '#FBC02D',\r\n      '#F9A825',\r\n      '#F57F17',\r\n      '#FFFF8D',\r\n      '#FFFF00',\r\n      '#FFEA00',\r\n      '#FFD600',\r\n    ],\r\n    amber: [\r\n      '#FFF8E1',\r\n      '#FFECB3',\r\n      '#FFE082',\r\n      '#FFD54F',\r\n      '#FFCA28',\r\n      '#FFC107',\r\n      '#FFB300',\r\n      '#FFA000',\r\n      '#FF8F00',\r\n      '#FF6F00',\r\n      '#FFE57F',\r\n      '#FFD740',\r\n      '#FFC400',\r\n      '#FFAB00',\r\n    ],\r\n    orange: [\r\n      '#FFF3E0',\r\n      '#FFE0B2',\r\n      '#FFCC80',\r\n      '#FFB74D',\r\n      '#FFA726',\r\n      '#FF9800',\r\n      '#FB8C00',\r\n      '#F57C00',\r\n      '#EF6C00',\r\n      '#E65100',\r\n      '#FFD180',\r\n      '#FFAB40',\r\n      '#FF9100',\r\n      '#FF6D00',\r\n    ],\r\n    deepOrange: [\r\n      '#FBE9E7',\r\n      '#FFCCBC',\r\n      '#FFAB91',\r\n      '#FF8A65',\r\n      '#FF7043',\r\n      '#FF5722',\r\n      '#F4511E',\r\n      '#E64A19',\r\n      '#D84315',\r\n      '#BF360C',\r\n      '#FF9E80',\r\n      '#FF6E40',\r\n      '#FF3D00',\r\n      '#DD2C00',\r\n    ],\r\n    brown: [\r\n      '#EFEBE9',\r\n      '#D7CCC8',\r\n      '#BCAAA4',\r\n      '#A1887F',\r\n      '#8D6E63',\r\n      '#795548',\r\n      '#6D4C41',\r\n      '#5D4037',\r\n      '#4E342E',\r\n      '#3E2723',\r\n    ],\r\n    grey: [\r\n      '#FAFAFA',\r\n      '#F5F5F5',\r\n      '#EEEEEE',\r\n      '#E0E0E0',\r\n      '#BDBDBD',\r\n      '#9E9E9E',\r\n      '#757575',\r\n      '#616161',\r\n      '#424242',\r\n      '#212121',\r\n    ],\r\n    blueGrey: [\r\n      '#ECEFF1',\r\n      '#CFD8DC',\r\n      '#B0BEC5',\r\n      '#90A4AE',\r\n      '#78909C',\r\n      '#607D8B',\r\n      '#546E7A',\r\n      '#455A64',\r\n      '#37474F',\r\n      '#263238',\r\n    ],\r\n  };\r\n\r\n  const colorKeys = Object.keys(materialColors) as Array<\r\n    keyof typeof materialColors\r\n  >;\r\n\r\n  const randomColorKey =\r\n    colorKeys[Math.floor(Math.random() * colorKeys.length)];\r\n\r\n  const randomColorPalette = materialColors[randomColorKey];\r\n\r\n  const randomBackgroundColor =\r\n    randomColorPalette[Math.floor(Math.random() * randomColorPalette.length)];\r\n\r\n  // Determine the appropriate text color based on the background color brightness\r\n  const colorIsDark = isColorDark(randomBackgroundColor);\r\n  const textColor = colorIsDark ? '#FFFFFF' : '#000000';\r\n\r\n  return {\r\n    backgroundColor: randomBackgroundColor,\r\n    color: textColor,\r\n  };\r\n}\r\n\r\n// Helper function to determine if a color is dark\r\nfunction isColorDark(hexColor: string): boolean {\r\n  // Convert hex to RGB\r\n  const rgb = parseInt(hexColor.slice(1), 16); // convert rrggbb to decimal\r\n  const r = (rgb >> 16) & 0xff;\r\n  const g = (rgb >> 8) & 0xff;\r\n  const b = (rgb >> 0) & 0xff;\r\n\r\n  // Calculate luminance\r\n  const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;\r\n\r\n  // If luminance is less than 128, the color is dark\r\n  return luminance < 128;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "backgroundColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
             "name": "User",
             "id": "interface-User-d4821beac0e4a852e513391b7470981c4353fdd95a18628bb68136c8695b489ee15b926e2e5031bc26cf30e1508e0a362c3ee13a06734702b4d15af140e485d5",
             "file": "src/stories/user.ts",
@@ -273,7 +306,7 @@
         },
         {
             "name": "DayEventsDisplayComponent",
-            "id": "component-DayEventsDisplayComponent-27e2ecc1bb415de10dc33af941d3874c06e8880bfeb16a7b6ef49a14de73590c04145824bfad9876adb992b82e4b1ee18d834a5eddf38642fd4c99ecd31691bd",
+            "id": "component-DayEventsDisplayComponent-749818e184943022c961d8f7512e458d3249a09183abccff72355ef87b99ecbf71504c53a2e35e6d9c38243af627240c2b6136605804e73cb042d1ebd5f6e67f",
             "file": "src/app/features/components/day-events-display/day-events-display.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -293,7 +326,7 @@
                     "name": "dateOfEvent",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 12,
+                    "line": 13,
                     "type": "Date",
                     "decorators": []
                 }
@@ -310,12 +343,16 @@
                 {
                     "name": "CommonModule",
                     "type": "module"
+                },
+                {
+                    "name": "MatCardModule",
+                    "type": "module"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-day-events-display',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './day-events-display.component.html',\r\n  styleUrl: './day-events-display.component.scss',\r\n})\r\nexport class DayEventsDisplayComponent {\r\n  @Input() dateOfEvent!: Date;\r\n\r\n  constructor() {}\r\n}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport { MatCardModule } from '@angular/material/card';\r\n\r\n@Component({\r\n  selector: 'app-day-events-display',\r\n  standalone: true,\r\n  imports: [CommonModule, MatCardModule],\r\n  templateUrl: './day-events-display.component.html',\r\n  styleUrl: './day-events-display.component.scss',\r\n})\r\nexport class DayEventsDisplayComponent {\r\n  @Input() dateOfEvent!: Date;\r\n\r\n  constructor() {}\r\n}\r\n",
             "styleUrl": "./day-events-display.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -326,10 +363,10 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 12
+                "line": 13
             },
             "extends": [],
-            "templateData": "<section class=\"container\">\r\n  <div class=\"container__day-header\">{{ dateOfEvent | date: \"EEE\" }}</div>\r\n  <div class=\"container__day-events\">TEST</div>\r\n</section>\r\n"
+            "templateData": "<!-- <section class=\"container\">\r\n  <div class=\"container__day-header\">{{ dateOfEvent | date: \"EEE\" }}</div>\r\n  <div class=\"container__day-events\">TEST</div>\r\n</section> -->\r\n<mat-card class=\"card\">\r\n  <mat-card-header class=\"card__header\">\r\n    <h3>Johnjix Bautista Reyes</h3>\r\n    <h4>Event Name</h4>\r\n  </mat-card-header>\r\n  <mat-card-content>\r\n    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, consectetur!\r\n    Ipsa, quos aliquid. Praesentium, libero! Tenetur, sed! Est optio nam\r\n    quibusdam suscipit culpa? Inventore voluptate, laboriosam a excepturi sit\r\n    deserunt!\r\n  </mat-card-content>\r\n</mat-card>\r\n"
         },
         {
             "name": "HeaderComponent",
@@ -665,6 +702,74 @@
             ],
             "stylesData": "",
             "extends": []
+        },
+        {
+            "name": "UserPillComponent",
+            "id": "component-UserPillComponent-15bcf275998e2a5a69665c322f35bd13ad5f68ec77fee93e62f69bc1461e87eae03bfe68e039101f7b20f6ca1cdcfd2121ce75a38557ac3613c248ff5cf7cca4",
+            "file": "src/app/features/components/user-pill/user-pill.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-user-pill",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./user-pill.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "colourScheme",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "MaterialColorScheme",
+                    "decorators": []
+                },
+                {
+                    "name": "userName",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport { MaterialColorScheme } from '../../../shared/generateRandomMaterialColorScheme';\r\n\r\n@Component({\r\n  selector: 'app-user-pill',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './user-pill.component.html',\r\n  styleUrl: './user-pill.component.scss',\r\n})\r\nexport class UserPillComponent {\r\n  @Input() userName!: string;\r\n  @Input() colourScheme!: MaterialColorScheme;\r\n\r\n  constructor() {}\r\n}\r\n",
+            "styleUrl": "./user-pill.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 14
+            },
+            "extends": [],
+            "templateData": "<section\r\n  class=\"container\"\r\n  [style.background-color]=\"colourScheme.backgroundColor\"\r\n  [style.color]=\"colourScheme.color\"\r\n>\r\n  {{ userName }}\r\n</section>\r\n"
         }
     ],
     "modules": [],
@@ -689,9 +794,60 @@
                 "deprecationMessage": "",
                 "type": "[]",
                 "defaultValue": "[NavComponent]"
+            },
+            {
+                "name": "homePath",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/core/app.routes.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "string",
+                "defaultValue": "'home'"
             }
         ],
-        "functions": [],
+        "functions": [
+            {
+                "name": "getRandomMaterialColorScheme",
+                "file": "src/app/shared/generateRandomMaterialColorScheme.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [],
+                "returnType": "MaterialColorScheme"
+            },
+            {
+                "name": "isColorDark",
+                "file": "src/app/shared/generateRandomMaterialColorScheme.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "hexColor",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "returnType": "boolean",
+                "jsdoctags": [
+                    {
+                        "name": "hexColor",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        ],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
@@ -718,15 +874,70 @@
                     "type": "[]",
                     "defaultValue": "[NavComponent]"
                 }
+            ],
+            "src/app/core/app.routes.ts": [
+                {
+                    "name": "homePath",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/core/app.routes.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "defaultValue": "'home'"
+                }
             ]
         },
-        "groupedFunctions": {},
+        "groupedFunctions": {
+            "src/app/shared/generateRandomMaterialColorScheme.ts": [
+                {
+                    "name": "getRandomMaterialColorScheme",
+                    "file": "src/app/shared/generateRandomMaterialColorScheme.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [],
+                    "returnType": "MaterialColorScheme"
+                },
+                {
+                    "name": "isColorDark",
+                    "file": "src/app/shared/generateRandomMaterialColorScheme.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "hexColor",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "returnType": "boolean",
+                    "jsdoctags": [
+                        {
+                            "name": "hexColor",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
         "groupedEnumerations": {},
         "groupedTypeAliases": {}
     },
     "routes": [],
     "coverage": {
-        "count": 7,
+        "count": 5,
         "status": "low",
         "files": [
             {
@@ -754,6 +965,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "appConfig",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/core/app.routes.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "homePath",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -792,6 +1013,44 @@
                 "name": "HomeComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/components/user-pill/user-pill.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "UserPillComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/generateRandomMaterialColorScheme.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "MaterialColorScheme",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/generateRandomMaterialColorScheme.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "getRandomMaterialColorScheme",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/generateRandomMaterialColorScheme.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "isColorDark",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {

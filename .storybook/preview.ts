@@ -14,13 +14,12 @@ const preview: Preview = {
   },
   decorators: [
     componentWrapperDecorator(
-      (
-        story,
-      ) => `<div class="mat-app-background mat-typography" style="margin: 2rem;">
-    ${story}
+      (story) => `<div class="mat-app-background mat-typography" >
+    <div style="margin: 2rem;">${story}</div>
   </div>`,
     ),
   ],
+  tags: ['autodocs'],
 };
 
 export default preview;
