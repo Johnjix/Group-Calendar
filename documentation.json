@@ -2,13 +2,55 @@
     "pipes": [],
     "interfaces": [
         {
+            "name": "Attendee",
+            "id": "interface-Attendee-ac1a19e8251d0ba11e8eea141a93a47675efd1225ace0b280d1e2b4c087871549fae4ef40883b7857dabc9e47dc621d8085273be0089553dbae0153a85981665",
+            "file": "src/app/models/attendee.model.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { MaterialColorScheme } from '../shared/generateRandomMaterialColorScheme';\r\n\r\nexport interface Attendee {\r\n  Name: string;\r\n  PlusOneCount: number;\r\n  colourScheme: MaterialColorScheme;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "colourScheme",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "MaterialColorScheme",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "Name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "PlusOneCount",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        },
+        {
             "name": "MaterialColorScheme",
-            "id": "interface-MaterialColorScheme-834bfcef40c9ecf9bf033f955c5c3f9450763ef829cd987174c2181ea9e9d8b89967b8d439db1c2a2b4c4d7c19510b387be27a23cc87081b6f6d0945933ccdd9",
+            "id": "interface-MaterialColorScheme-662783eeefe175afa0998277a6ab77e642b17a720458a3dc34854f9aaff63a8e84b8fc98742dac69fa0a34db778155c3e03c15be71a9fb68a862cd5b10fe76e1",
             "file": "src/app/shared/generateRandomMaterialColorScheme.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface MaterialColorScheme {\r\n  backgroundColor: string;\r\n  color: string;\r\n}\r\nexport function getRandomMaterialColorScheme(): MaterialColorScheme {\r\n  const materialColors: { [key: string]: string[] } = {\r\n    red: [\r\n      '#FFEBEE',\r\n      '#FFCDD2',\r\n      '#EF9A9A',\r\n      '#E57373',\r\n      '#EF5350',\r\n      '#F44336',\r\n      '#E53935',\r\n      '#D32F2F',\r\n      '#C62828',\r\n      '#B71C1C',\r\n      '#FF8A80',\r\n      '#FF5252',\r\n      '#FF1744',\r\n      '#D50000',\r\n    ],\r\n    pink: [\r\n      '#FCE4EC',\r\n      '#F8BBD0',\r\n      '#F48FB1',\r\n      '#F06292',\r\n      '#EC407A',\r\n      '#E91E63',\r\n      '#D81B60',\r\n      '#C2185B',\r\n      '#AD1457',\r\n      '#880E4F',\r\n      '#FF80AB',\r\n      '#FF4081',\r\n      '#F50057',\r\n      '#C51162',\r\n    ],\r\n    purple: [\r\n      '#F3E5F5',\r\n      '#E1BEE7',\r\n      '#CE93D8',\r\n      '#BA68C8',\r\n      '#AB47BC',\r\n      '#9C27B0',\r\n      '#8E24AA',\r\n      '#7B1FA2',\r\n      '#6A1B9A',\r\n      '#4A148C',\r\n      '#EA80FC',\r\n      '#E040FB',\r\n      '#D500F9',\r\n      '#AA00FF',\r\n    ],\r\n    deepPurple: [\r\n      '#EDE7F6',\r\n      '#D1C4E9',\r\n      '#B39DDB',\r\n      '#9575CD',\r\n      '#7E57C2',\r\n      '#673AB7',\r\n      '#5E35B1',\r\n      '#512DA8',\r\n      '#4527A0',\r\n      '#311B92',\r\n      '#B388FF',\r\n      '#7C4DFF',\r\n      '#651FFF',\r\n      '#6200EA',\r\n    ],\r\n    indigo: [\r\n      '#E8EAF6',\r\n      '#C5CAE9',\r\n      '#9FA8DA',\r\n      '#7986CB',\r\n      '#5C6BC0',\r\n      '#3F51B5',\r\n      '#3949AB',\r\n      '#303F9F',\r\n      '#283593',\r\n      '#1A237E',\r\n      '#8C9EFF',\r\n      '#536DFE',\r\n      '#3D5AFE',\r\n      '#304FFE',\r\n    ],\r\n    blue: [\r\n      '#E3F2FD',\r\n      '#BBDEFB',\r\n      '#90CAF9',\r\n      '#64B5F6',\r\n      '#42A5F5',\r\n      '#2196F3',\r\n      '#1E88E5',\r\n      '#1976D2',\r\n      '#1565C0',\r\n      '#0D47A1',\r\n      '#82B1FF',\r\n      '#448AFF',\r\n      '#2979FF',\r\n      '#2962FF',\r\n    ],\r\n    lightBlue: [\r\n      '#E1F5FE',\r\n      '#B3E5FC',\r\n      '#81D4FA',\r\n      '#4FC3F7',\r\n      '#29B6F6',\r\n      '#03A9F4',\r\n      '#039BE5',\r\n      '#0288D1',\r\n      '#0277BD',\r\n      '#01579B',\r\n      '#80D8FF',\r\n      '#40C4FF',\r\n      '#00B0FF',\r\n      '#0091EA',\r\n    ],\r\n    cyan: [\r\n      '#E0F7FA',\r\n      '#B2EBF2',\r\n      '#80DEEA',\r\n      '#4DD0E1',\r\n      '#26C6DA',\r\n      '#00BCD4',\r\n      '#00ACC1',\r\n      '#0097A7',\r\n      '#00838F',\r\n      '#006064',\r\n      '#84FFFF',\r\n      '#18FFFF',\r\n      '#00E5FF',\r\n      '#00B8D4',\r\n    ],\r\n    teal: [\r\n      '#E0F2F1',\r\n      '#B2DFDB',\r\n      '#80CBC4',\r\n      '#4DB6AC',\r\n      '#26A69A',\r\n      '#009688',\r\n      '#00897B',\r\n      '#00796B',\r\n      '#00695C',\r\n      '#004D40',\r\n      '#A7FFEB',\r\n      '#64FFDA',\r\n      '#1DE9B6',\r\n      '#00BFA5',\r\n    ],\r\n    green: [\r\n      '#E8F5E9',\r\n      '#C8E6C9',\r\n      '#A5D6A7',\r\n      '#81C784',\r\n      '#66BB6A',\r\n      '#4CAF50',\r\n      '#43A047',\r\n      '#388E3C',\r\n      '#2E7D32',\r\n      '#1B5E20',\r\n      '#B9F6CA',\r\n      '#69F0AE',\r\n      '#00E676',\r\n      '#00C853',\r\n    ],\r\n    lightGreen: [\r\n      '#F1F8E9',\r\n      '#DCEDC8',\r\n      '#C5E1A5',\r\n      '#AED581',\r\n      '#9CCC65',\r\n      '#8BC34A',\r\n      '#7CB342',\r\n      '#689F38',\r\n      '#558B2F',\r\n      '#33691E',\r\n      '#CCFF90',\r\n      '#B2FF59',\r\n      '#76FF03',\r\n      '#64DD17',\r\n    ],\r\n    lime: [\r\n      '#F9FBE7',\r\n      '#F0F4C3',\r\n      '#E6EE9C',\r\n      '#DCE775',\r\n      '#D4E157',\r\n      '#CDDC39',\r\n      '#C0CA33',\r\n      '#AFB42B',\r\n      '#9E9D24',\r\n      '#827717',\r\n      '#F4FF81',\r\n      '#EEFF41',\r\n      '#C6FF00',\r\n      '#AEEA00',\r\n    ],\r\n    yellow: [\r\n      '#FFFDE7',\r\n      '#FFF9C4',\r\n      '#FFF59D',\r\n      '#FFF176',\r\n      '#FFEE58',\r\n      '#FFEB3B',\r\n      '#FDD835',\r\n      '#FBC02D',\r\n      '#F9A825',\r\n      '#F57F17',\r\n      '#FFFF8D',\r\n      '#FFFF00',\r\n      '#FFEA00',\r\n      '#FFD600',\r\n    ],\r\n    amber: [\r\n      '#FFF8E1',\r\n      '#FFECB3',\r\n      '#FFE082',\r\n      '#FFD54F',\r\n      '#FFCA28',\r\n      '#FFC107',\r\n      '#FFB300',\r\n      '#FFA000',\r\n      '#FF8F00',\r\n      '#FF6F00',\r\n      '#FFE57F',\r\n      '#FFD740',\r\n      '#FFC400',\r\n      '#FFAB00',\r\n    ],\r\n    orange: [\r\n      '#FFF3E0',\r\n      '#FFE0B2',\r\n      '#FFCC80',\r\n      '#FFB74D',\r\n      '#FFA726',\r\n      '#FF9800',\r\n      '#FB8C00',\r\n      '#F57C00',\r\n      '#EF6C00',\r\n      '#E65100',\r\n      '#FFD180',\r\n      '#FFAB40',\r\n      '#FF9100',\r\n      '#FF6D00',\r\n    ],\r\n    deepOrange: [\r\n      '#FBE9E7',\r\n      '#FFCCBC',\r\n      '#FFAB91',\r\n      '#FF8A65',\r\n      '#FF7043',\r\n      '#FF5722',\r\n      '#F4511E',\r\n      '#E64A19',\r\n      '#D84315',\r\n      '#BF360C',\r\n      '#FF9E80',\r\n      '#FF6E40',\r\n      '#FF3D00',\r\n      '#DD2C00',\r\n    ],\r\n    brown: [\r\n      '#EFEBE9',\r\n      '#D7CCC8',\r\n      '#BCAAA4',\r\n      '#A1887F',\r\n      '#8D6E63',\r\n      '#795548',\r\n      '#6D4C41',\r\n      '#5D4037',\r\n      '#4E342E',\r\n      '#3E2723',\r\n    ],\r\n    grey: [\r\n      '#FAFAFA',\r\n      '#F5F5F5',\r\n      '#EEEEEE',\r\n      '#E0E0E0',\r\n      '#BDBDBD',\r\n      '#9E9E9E',\r\n      '#757575',\r\n      '#616161',\r\n      '#424242',\r\n      '#212121',\r\n    ],\r\n    blueGrey: [\r\n      '#ECEFF1',\r\n      '#CFD8DC',\r\n      '#B0BEC5',\r\n      '#90A4AE',\r\n      '#78909C',\r\n      '#607D8B',\r\n      '#546E7A',\r\n      '#455A64',\r\n      '#37474F',\r\n      '#263238',\r\n    ],\r\n  };\r\n\r\n  const colorKeys = Object.keys(materialColors) as Array<\r\n    keyof typeof materialColors\r\n  >;\r\n\r\n  const randomColorKey =\r\n    colorKeys[Math.floor(Math.random() * colorKeys.length)];\r\n\r\n  const randomColorPalette = materialColors[randomColorKey];\r\n\r\n  const randomBackgroundColor =\r\n    randomColorPalette[Math.floor(Math.random() * randomColorPalette.length)];\r\n\r\n  // Determine the appropriate text color based on the background color brightness\r\n  const colorIsDark = isColorDark(randomBackgroundColor);\r\n  const textColor = colorIsDark ? '#FFFFFF' : '#000000';\r\n\r\n  return {\r\n    backgroundColor: randomBackgroundColor,\r\n    color: textColor,\r\n  };\r\n}\r\n\r\n// Helper function to determine if a color is dark\r\nfunction isColorDark(hexColor: string): boolean {\r\n  // Convert hex to RGB\r\n  const rgb = parseInt(hexColor.slice(1), 16); // convert rrggbb to decimal\r\n  const r = (rgb >> 16) & 0xff;\r\n  const g = (rgb >> 8) & 0xff;\r\n  const b = (rgb >> 0) & 0xff;\r\n\r\n  // Calculate luminance\r\n  const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;\r\n\r\n  // If luminance is less than 128, the color is dark\r\n  return luminance < 128;\r\n}\r\n",
+            "sourceCode": "import { MATERIAL_COLOURS } from './materialColourSchemes';\r\n\r\nexport interface MaterialColorScheme {\r\n  backgroundColor: string;\r\n  color: string;\r\n}\r\nexport function getRandomMaterialColorScheme(): MaterialColorScheme {\r\n  const materialColors = MATERIAL_COLOURS;\r\n\r\n  const colorKeys = Object.keys(materialColors) as Array<\r\n    keyof typeof materialColors\r\n  >;\r\n\r\n  const randomColorKey =\r\n    colorKeys[Math.floor(Math.random() * colorKeys.length)];\r\n\r\n  const randomColorPalette = materialColors[randomColorKey];\r\n\r\n  const randomBackgroundColor =\r\n    randomColorPalette[Math.floor(Math.random() * randomColorPalette.length)];\r\n\r\n  // Determine the appropriate text color based on the background color brightness\r\n  const colorIsDark = isColorDark(randomBackgroundColor);\r\n  const textColor = colorIsDark ? '#FFFFFF' : '#000000';\r\n\r\n  return {\r\n    backgroundColor: randomBackgroundColor,\r\n    color: textColor,\r\n  };\r\n}\r\n\r\n// Helper function to determine if a color is dark\r\nfunction isColorDark(hexColor: string): boolean {\r\n  // Convert hex to RGB\r\n  const rgb = parseInt(hexColor.slice(1), 16); // convert rrggbb to decimal\r\n  const r = (rgb >> 16) & 0xff;\r\n  const g = (rgb >> 8) & 0xff;\r\n  const b = (rgb >> 0) & 0xff;\r\n\r\n  // Calculate luminance\r\n  const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;\r\n\r\n  // If luminance is less than 128, the color is dark\r\n  return luminance < 128;\r\n}\r\n",
             "properties": [
                 {
                     "name": "backgroundColor",
@@ -17,7 +59,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 2
+                    "line": 4
                 },
                 {
                     "name": "color",
@@ -26,7 +68,7 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 3
+                    "line": 5
                 }
             ],
             "indexSignatures": [],
@@ -306,7 +348,7 @@
         },
         {
             "name": "DayEventsDisplayComponent",
-            "id": "component-DayEventsDisplayComponent-749818e184943022c961d8f7512e458d3249a09183abccff72355ef87b99ecbf71504c53a2e35e6d9c38243af627240c2b6136605804e73cb042d1ebd5f6e67f",
+            "id": "component-DayEventsDisplayComponent-6d60c98b95726ae79e3f895cdfb4bda6efa9633797aab8637c6048a08e669f67d631ac615042a2cf4698cc7589c42865659cb4a02c436e15749a849f7026a4c4",
             "file": "src/app/features/components/day-events-display/day-events-display.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -323,17 +365,122 @@
             "hostDirectives": [],
             "inputsClass": [
                 {
+                    "name": "attendees",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "Attendee[]",
+                    "decorators": []
+                },
+                {
                     "name": "dateOfEvent",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 15,
                     "type": "Date",
+                    "decorators": []
+                },
+                {
+                    "name": "eventLocation",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "eventName",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "organiser",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "string",
                     "decorators": []
                 }
             ],
             "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "totalNumberOfAttendees",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 21,
+                    "modifierKind": [
+                        124
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "calculateTotalNumberOfAttendees",
+                    "args": [
+                        {
+                            "name": "attendees",
+                            "type": "Attendee[]",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 32,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        123
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "attendees",
+                            "type": "Attendee[]",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnChanges",
+                    "args": [
+                        {
+                            "name": "changes",
+                            "type": "SimpleChanges",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 28,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "changes",
+                            "type": "SimpleChanges",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -347,12 +494,16 @@
                 {
                     "name": "MatCardModule",
                     "type": "module"
+                },
+                {
+                    "name": "UserPillComponent",
+                    "type": "component"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport { MatCardModule } from '@angular/material/card';\r\n\r\n@Component({\r\n  selector: 'app-day-events-display',\r\n  standalone: true,\r\n  imports: [CommonModule, MatCardModule],\r\n  templateUrl: './day-events-display.component.html',\r\n  styleUrl: './day-events-display.component.scss',\r\n})\r\nexport class DayEventsDisplayComponent {\r\n  @Input() dateOfEvent!: Date;\r\n\r\n  constructor() {}\r\n}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, OnChanges, SimpleChanges } from '@angular/core';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { Attendee } from '../../../models/attendee.model';\r\nimport { UserPillComponent } from '../user-pill/user-pill.component';\r\n\r\n@Component({\r\n  selector: 'app-day-events-display',\r\n  standalone: true,\r\n  imports: [CommonModule, MatCardModule, UserPillComponent],\r\n  templateUrl: './day-events-display.component.html',\r\n  styleUrl: './day-events-display.component.scss',\r\n})\r\nexport class DayEventsDisplayComponent implements OnChanges {\r\n  @Input() dateOfEvent!: Date;\r\n  @Input() organiser!: string;\r\n  @Input() eventName!: string;\r\n  @Input() eventLocation!: string;\r\n  @Input() attendees: Attendee[];\r\n\r\n  protected totalNumberOfAttendees: number;\r\n\r\n  constructor() {\r\n    this.attendees = [];\r\n    this.totalNumberOfAttendees = 0;\r\n  }\r\n\r\n  ngOnChanges(changes: SimpleChanges): void {\r\n    this.calculateTotalNumberOfAttendees(changes['attendees'].currentValue);\r\n  }\r\n\r\n  private calculateTotalNumberOfAttendees(attendees: Attendee[]): void {\r\n    this.totalNumberOfAttendees = attendees.length;\r\n  }\r\n}\r\n",
             "styleUrl": "./day-events-display.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -363,10 +514,13 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 13
+                "line": 21
             },
             "extends": [],
-            "templateData": "<!-- <section class=\"container\">\r\n  <div class=\"container__day-header\">{{ dateOfEvent | date: \"EEE\" }}</div>\r\n  <div class=\"container__day-events\">TEST</div>\r\n</section> -->\r\n<mat-card class=\"card\">\r\n  <mat-card-header class=\"card__header\">\r\n    <h3>Johnjix Bautista Reyes</h3>\r\n    <h4>Event Name</h4>\r\n  </mat-card-header>\r\n  <mat-card-content>\r\n    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, consectetur!\r\n    Ipsa, quos aliquid. Praesentium, libero! Tenetur, sed! Est optio nam\r\n    quibusdam suscipit culpa? Inventore voluptate, laboriosam a excepturi sit\r\n    deserunt!\r\n  </mat-card-content>\r\n</mat-card>\r\n"
+            "implements": [
+                "OnChanges"
+            ],
+            "templateData": "<mat-card class=\"card\">\r\n  <mat-card-header class=\"card__header\">\r\n    <h3>{{ organiser }}</h3>\r\n    <h4>{{ eventName }}</h4>\r\n    <div class=\"card__header__date-location-group\">\r\n      <h6>Date: {{ dateOfEvent | date }}</h6>\r\n      <h6>Location: {{ eventLocation }}</h6>\r\n    </div>\r\n  </mat-card-header>\r\n  <mat-card-content class=\"card__content\">\r\n    <strong>Attendees: {{ totalNumberOfAttendees }}</strong>\r\n    <div class=\"card__content__attendees\">\r\n      @for (attendee of attendees; track $index) {\r\n        <app-user-pill\r\n          [userName]=\"attendee.Name\"\r\n          [plusOneCount]=\"attendee.PlusOneCount\"\r\n          [colourScheme]=\"attendee.colourScheme\"\r\n        ></app-user-pill>\r\n      }\r\n    </div>\r\n  </mat-card-content>\r\n</mat-card>\r\n"
         },
         {
             "name": "HeaderComponent",
@@ -705,7 +859,7 @@
         },
         {
             "name": "UserPillComponent",
-            "id": "component-UserPillComponent-15bcf275998e2a5a69665c322f35bd13ad5f68ec77fee93e62f69bc1461e87eae03bfe68e039101f7b20f6ca1cdcfd2121ce75a38557ac3613c248ff5cf7cca4",
+            "id": "component-UserPillComponent-f237187d07d0e2bc7c83f84b2670c924ce8fa77bb9d660f10646c3e33fb7f10e89622418acf0c91f482a04c62879123cd7401d84b77b3a222817e15a1f59b6c8",
             "file": "src/app/features/components/user-pill/user-pill.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -725,15 +879,23 @@
                     "name": "colourScheme",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 14,
+                    "line": 15,
                     "type": "MaterialColorScheme",
+                    "decorators": []
+                },
+                {
+                    "name": "plusOneCount",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "number",
                     "decorators": []
                 },
                 {
                     "name": "userName",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 14,
                     "type": "string",
                     "decorators": []
                 }
@@ -750,12 +912,16 @@
                 {
                     "name": "CommonModule",
                     "type": "module"
+                },
+                {
+                    "name": "MatBadgeModule",
+                    "type": "module"
                 }
             ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport { MaterialColorScheme } from '../../../shared/generateRandomMaterialColorScheme';\r\n\r\n@Component({\r\n  selector: 'app-user-pill',\r\n  standalone: true,\r\n  imports: [CommonModule],\r\n  templateUrl: './user-pill.component.html',\r\n  styleUrl: './user-pill.component.scss',\r\n})\r\nexport class UserPillComponent {\r\n  @Input() userName!: string;\r\n  @Input() colourScheme!: MaterialColorScheme;\r\n\r\n  constructor() {}\r\n}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport { MaterialColorScheme } from '../../../shared/generateRandomMaterialColorScheme';\r\nimport { MatBadgeModule } from '@angular/material/badge';\r\n\r\n@Component({\r\n  selector: 'app-user-pill',\r\n  standalone: true,\r\n  imports: [CommonModule, MatBadgeModule],\r\n  templateUrl: './user-pill.component.html',\r\n  styleUrl: './user-pill.component.scss',\r\n})\r\nexport class UserPillComponent {\r\n  @Input() userName!: string;\r\n  @Input() colourScheme!: MaterialColorScheme;\r\n  @Input() plusOneCount!: number;\r\n\r\n  constructor() {}\r\n}\r\n",
             "styleUrl": "./user-pill.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -766,10 +932,10 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 14
+                "line": 16
             },
             "extends": [],
-            "templateData": "<section\r\n  class=\"container\"\r\n  [style.background-color]=\"colourScheme.backgroundColor\"\r\n  [style.color]=\"colourScheme.color\"\r\n>\r\n  {{ userName }}\r\n</section>\r\n"
+            "templateData": "<section\r\n  class=\"container mat-badge-extra-large\"\r\n  [style.background-color]=\"colourScheme.backgroundColor\"\r\n  [style.color]=\"colourScheme.color\"\r\n  [matBadge]=\"plusOneCount > 0 ? '+' + plusOneCount : ''\"\r\n  matBadgeSize=\"large\"\r\n>\r\n  <span>{{ userName }}</span>\r\n</section>\r\n"
         }
     ],
     "modules": [],
@@ -804,6 +970,16 @@
                 "deprecationMessage": "",
                 "type": "string",
                 "defaultValue": "'home'"
+            },
+            {
+                "name": "MATERIAL_COLOURS",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/shared/materialColourSchemes.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "literal type",
+                "defaultValue": "{\r\n  red: [\r\n    '#FFEBEE',\r\n    '#FFCDD2',\r\n    '#EF9A9A',\r\n    '#E57373',\r\n    '#EF5350',\r\n    '#F44336',\r\n    '#E53935',\r\n    '#D32F2F',\r\n    '#C62828',\r\n    '#B71C1C',\r\n    '#FF8A80',\r\n    '#FF5252',\r\n    '#FF1744',\r\n    '#D50000',\r\n  ],\r\n  pink: [\r\n    '#FCE4EC',\r\n    '#F8BBD0',\r\n    '#F48FB1',\r\n    '#F06292',\r\n    '#EC407A',\r\n    '#E91E63',\r\n    '#D81B60',\r\n    '#C2185B',\r\n    '#AD1457',\r\n    '#880E4F',\r\n    '#FF80AB',\r\n    '#FF4081',\r\n    '#F50057',\r\n    '#C51162',\r\n  ],\r\n  purple: [\r\n    '#F3E5F5',\r\n    '#E1BEE7',\r\n    '#CE93D8',\r\n    '#BA68C8',\r\n    '#AB47BC',\r\n    '#9C27B0',\r\n    '#8E24AA',\r\n    '#7B1FA2',\r\n    '#6A1B9A',\r\n    '#4A148C',\r\n    '#EA80FC',\r\n    '#E040FB',\r\n    '#D500F9',\r\n    '#AA00FF',\r\n  ],\r\n  deepPurple: [\r\n    '#EDE7F6',\r\n    '#D1C4E9',\r\n    '#B39DDB',\r\n    '#9575CD',\r\n    '#7E57C2',\r\n    '#673AB7',\r\n    '#5E35B1',\r\n    '#512DA8',\r\n    '#4527A0',\r\n    '#311B92',\r\n    '#B388FF',\r\n    '#7C4DFF',\r\n    '#651FFF',\r\n    '#6200EA',\r\n  ],\r\n  indigo: [\r\n    '#E8EAF6',\r\n    '#C5CAE9',\r\n    '#9FA8DA',\r\n    '#7986CB',\r\n    '#5C6BC0',\r\n    '#3F51B5',\r\n    '#3949AB',\r\n    '#303F9F',\r\n    '#283593',\r\n    '#1A237E',\r\n    '#8C9EFF',\r\n    '#536DFE',\r\n    '#3D5AFE',\r\n    '#304FFE',\r\n  ],\r\n  blue: [\r\n    '#E3F2FD',\r\n    '#BBDEFB',\r\n    '#90CAF9',\r\n    '#64B5F6',\r\n    '#42A5F5',\r\n    '#2196F3',\r\n    '#1E88E5',\r\n    '#1976D2',\r\n    '#1565C0',\r\n    '#0D47A1',\r\n    '#82B1FF',\r\n    '#448AFF',\r\n    '#2979FF',\r\n    '#2962FF',\r\n  ],\r\n  lightBlue: [\r\n    '#E1F5FE',\r\n    '#B3E5FC',\r\n    '#81D4FA',\r\n    '#4FC3F7',\r\n    '#29B6F6',\r\n    '#03A9F4',\r\n    '#039BE5',\r\n    '#0288D1',\r\n    '#0277BD',\r\n    '#01579B',\r\n    '#80D8FF',\r\n    '#40C4FF',\r\n    '#00B0FF',\r\n    '#0091EA',\r\n  ],\r\n  cyan: [\r\n    '#E0F7FA',\r\n    '#B2EBF2',\r\n    '#80DEEA',\r\n    '#4DD0E1',\r\n    '#26C6DA',\r\n    '#00BCD4',\r\n    '#00ACC1',\r\n    '#0097A7',\r\n    '#00838F',\r\n    '#006064',\r\n    '#84FFFF',\r\n    '#18FFFF',\r\n    '#00E5FF',\r\n    '#00B8D4',\r\n  ],\r\n  teal: [\r\n    '#E0F2F1',\r\n    '#B2DFDB',\r\n    '#80CBC4',\r\n    '#4DB6AC',\r\n    '#26A69A',\r\n    '#009688',\r\n    '#00897B',\r\n    '#00796B',\r\n    '#00695C',\r\n    '#004D40',\r\n    '#A7FFEB',\r\n    '#64FFDA',\r\n    '#1DE9B6',\r\n    '#00BFA5',\r\n  ],\r\n  green: [\r\n    '#E8F5E9',\r\n    '#C8E6C9',\r\n    '#A5D6A7',\r\n    '#81C784',\r\n    '#66BB6A',\r\n    '#4CAF50',\r\n    '#43A047',\r\n    '#388E3C',\r\n    '#2E7D32',\r\n    '#1B5E20',\r\n    '#B9F6CA',\r\n    '#69F0AE',\r\n    '#00E676',\r\n    '#00C853',\r\n  ],\r\n  lightGreen: [\r\n    '#F1F8E9',\r\n    '#DCEDC8',\r\n    '#C5E1A5',\r\n    '#AED581',\r\n    '#9CCC65',\r\n    '#8BC34A',\r\n    '#7CB342',\r\n    '#689F38',\r\n    '#558B2F',\r\n    '#33691E',\r\n    '#CCFF90',\r\n    '#B2FF59',\r\n    '#76FF03',\r\n    '#64DD17',\r\n  ],\r\n  lime: [\r\n    '#F9FBE7',\r\n    '#F0F4C3',\r\n    '#E6EE9C',\r\n    '#DCE775',\r\n    '#D4E157',\r\n    '#CDDC39',\r\n    '#C0CA33',\r\n    '#AFB42B',\r\n    '#9E9D24',\r\n    '#827717',\r\n    '#F4FF81',\r\n    '#EEFF41',\r\n    '#C6FF00',\r\n    '#AEEA00',\r\n  ],\r\n  yellow: [\r\n    '#FFFDE7',\r\n    '#FFF9C4',\r\n    '#FFF59D',\r\n    '#FFF176',\r\n    '#FFEE58',\r\n    '#FFEB3B',\r\n    '#FDD835',\r\n    '#FBC02D',\r\n    '#F9A825',\r\n    '#F57F17',\r\n    '#FFFF8D',\r\n    '#FFFF00',\r\n    '#FFEA00',\r\n    '#FFD600',\r\n  ],\r\n  amber: [\r\n    '#FFF8E1',\r\n    '#FFECB3',\r\n    '#FFE082',\r\n    '#FFD54F',\r\n    '#FFCA28',\r\n    '#FFC107',\r\n    '#FFB300',\r\n    '#FFA000',\r\n    '#FF8F00',\r\n    '#FF6F00',\r\n    '#FFE57F',\r\n    '#FFD740',\r\n    '#FFC400',\r\n    '#FFAB00',\r\n  ],\r\n  orange: [\r\n    '#FFF3E0',\r\n    '#FFE0B2',\r\n    '#FFCC80',\r\n    '#FFB74D',\r\n    '#FFA726',\r\n    '#FF9800',\r\n    '#FB8C00',\r\n    '#F57C00',\r\n    '#EF6C00',\r\n    '#E65100',\r\n    '#FFD180',\r\n    '#FFAB40',\r\n    '#FF9100',\r\n    '#FF6D00',\r\n  ],\r\n  deepOrange: [\r\n    '#FBE9E7',\r\n    '#FFCCBC',\r\n    '#FFAB91',\r\n    '#FF8A65',\r\n    '#FF7043',\r\n    '#FF5722',\r\n    '#F4511E',\r\n    '#E64A19',\r\n    '#D84315',\r\n    '#BF360C',\r\n    '#FF9E80',\r\n    '#FF6E40',\r\n    '#FF3D00',\r\n    '#DD2C00',\r\n  ],\r\n  brown: [\r\n    '#EFEBE9',\r\n    '#D7CCC8',\r\n    '#BCAAA4',\r\n    '#A1887F',\r\n    '#8D6E63',\r\n    '#795548',\r\n    '#6D4C41',\r\n    '#5D4037',\r\n    '#4E342E',\r\n    '#3E2723',\r\n  ],\r\n  grey: [\r\n    '#FAFAFA',\r\n    '#F5F5F5',\r\n    '#EEEEEE',\r\n    '#E0E0E0',\r\n    '#BDBDBD',\r\n    '#9E9E9E',\r\n    '#757575',\r\n    '#616161',\r\n    '#424242',\r\n    '#212121',\r\n  ],\r\n  blueGrey: [\r\n    '#ECEFF1',\r\n    '#CFD8DC',\r\n    '#B0BEC5',\r\n    '#90A4AE',\r\n    '#78909C',\r\n    '#607D8B',\r\n    '#546E7A',\r\n    '#455A64',\r\n    '#37474F',\r\n    '#263238',\r\n  ],\r\n}"
             }
         ],
         "functions": [
@@ -886,6 +1062,18 @@
                     "type": "string",
                     "defaultValue": "'home'"
                 }
+            ],
+            "src/app/shared/materialColourSchemes.ts": [
+                {
+                    "name": "MATERIAL_COLOURS",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/materialColourSchemes.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type",
+                    "defaultValue": "{\r\n  red: [\r\n    '#FFEBEE',\r\n    '#FFCDD2',\r\n    '#EF9A9A',\r\n    '#E57373',\r\n    '#EF5350',\r\n    '#F44336',\r\n    '#E53935',\r\n    '#D32F2F',\r\n    '#C62828',\r\n    '#B71C1C',\r\n    '#FF8A80',\r\n    '#FF5252',\r\n    '#FF1744',\r\n    '#D50000',\r\n  ],\r\n  pink: [\r\n    '#FCE4EC',\r\n    '#F8BBD0',\r\n    '#F48FB1',\r\n    '#F06292',\r\n    '#EC407A',\r\n    '#E91E63',\r\n    '#D81B60',\r\n    '#C2185B',\r\n    '#AD1457',\r\n    '#880E4F',\r\n    '#FF80AB',\r\n    '#FF4081',\r\n    '#F50057',\r\n    '#C51162',\r\n  ],\r\n  purple: [\r\n    '#F3E5F5',\r\n    '#E1BEE7',\r\n    '#CE93D8',\r\n    '#BA68C8',\r\n    '#AB47BC',\r\n    '#9C27B0',\r\n    '#8E24AA',\r\n    '#7B1FA2',\r\n    '#6A1B9A',\r\n    '#4A148C',\r\n    '#EA80FC',\r\n    '#E040FB',\r\n    '#D500F9',\r\n    '#AA00FF',\r\n  ],\r\n  deepPurple: [\r\n    '#EDE7F6',\r\n    '#D1C4E9',\r\n    '#B39DDB',\r\n    '#9575CD',\r\n    '#7E57C2',\r\n    '#673AB7',\r\n    '#5E35B1',\r\n    '#512DA8',\r\n    '#4527A0',\r\n    '#311B92',\r\n    '#B388FF',\r\n    '#7C4DFF',\r\n    '#651FFF',\r\n    '#6200EA',\r\n  ],\r\n  indigo: [\r\n    '#E8EAF6',\r\n    '#C5CAE9',\r\n    '#9FA8DA',\r\n    '#7986CB',\r\n    '#5C6BC0',\r\n    '#3F51B5',\r\n    '#3949AB',\r\n    '#303F9F',\r\n    '#283593',\r\n    '#1A237E',\r\n    '#8C9EFF',\r\n    '#536DFE',\r\n    '#3D5AFE',\r\n    '#304FFE',\r\n  ],\r\n  blue: [\r\n    '#E3F2FD',\r\n    '#BBDEFB',\r\n    '#90CAF9',\r\n    '#64B5F6',\r\n    '#42A5F5',\r\n    '#2196F3',\r\n    '#1E88E5',\r\n    '#1976D2',\r\n    '#1565C0',\r\n    '#0D47A1',\r\n    '#82B1FF',\r\n    '#448AFF',\r\n    '#2979FF',\r\n    '#2962FF',\r\n  ],\r\n  lightBlue: [\r\n    '#E1F5FE',\r\n    '#B3E5FC',\r\n    '#81D4FA',\r\n    '#4FC3F7',\r\n    '#29B6F6',\r\n    '#03A9F4',\r\n    '#039BE5',\r\n    '#0288D1',\r\n    '#0277BD',\r\n    '#01579B',\r\n    '#80D8FF',\r\n    '#40C4FF',\r\n    '#00B0FF',\r\n    '#0091EA',\r\n  ],\r\n  cyan: [\r\n    '#E0F7FA',\r\n    '#B2EBF2',\r\n    '#80DEEA',\r\n    '#4DD0E1',\r\n    '#26C6DA',\r\n    '#00BCD4',\r\n    '#00ACC1',\r\n    '#0097A7',\r\n    '#00838F',\r\n    '#006064',\r\n    '#84FFFF',\r\n    '#18FFFF',\r\n    '#00E5FF',\r\n    '#00B8D4',\r\n  ],\r\n  teal: [\r\n    '#E0F2F1',\r\n    '#B2DFDB',\r\n    '#80CBC4',\r\n    '#4DB6AC',\r\n    '#26A69A',\r\n    '#009688',\r\n    '#00897B',\r\n    '#00796B',\r\n    '#00695C',\r\n    '#004D40',\r\n    '#A7FFEB',\r\n    '#64FFDA',\r\n    '#1DE9B6',\r\n    '#00BFA5',\r\n  ],\r\n  green: [\r\n    '#E8F5E9',\r\n    '#C8E6C9',\r\n    '#A5D6A7',\r\n    '#81C784',\r\n    '#66BB6A',\r\n    '#4CAF50',\r\n    '#43A047',\r\n    '#388E3C',\r\n    '#2E7D32',\r\n    '#1B5E20',\r\n    '#B9F6CA',\r\n    '#69F0AE',\r\n    '#00E676',\r\n    '#00C853',\r\n  ],\r\n  lightGreen: [\r\n    '#F1F8E9',\r\n    '#DCEDC8',\r\n    '#C5E1A5',\r\n    '#AED581',\r\n    '#9CCC65',\r\n    '#8BC34A',\r\n    '#7CB342',\r\n    '#689F38',\r\n    '#558B2F',\r\n    '#33691E',\r\n    '#CCFF90',\r\n    '#B2FF59',\r\n    '#76FF03',\r\n    '#64DD17',\r\n  ],\r\n  lime: [\r\n    '#F9FBE7',\r\n    '#F0F4C3',\r\n    '#E6EE9C',\r\n    '#DCE775',\r\n    '#D4E157',\r\n    '#CDDC39',\r\n    '#C0CA33',\r\n    '#AFB42B',\r\n    '#9E9D24',\r\n    '#827717',\r\n    '#F4FF81',\r\n    '#EEFF41',\r\n    '#C6FF00',\r\n    '#AEEA00',\r\n  ],\r\n  yellow: [\r\n    '#FFFDE7',\r\n    '#FFF9C4',\r\n    '#FFF59D',\r\n    '#FFF176',\r\n    '#FFEE58',\r\n    '#FFEB3B',\r\n    '#FDD835',\r\n    '#FBC02D',\r\n    '#F9A825',\r\n    '#F57F17',\r\n    '#FFFF8D',\r\n    '#FFFF00',\r\n    '#FFEA00',\r\n    '#FFD600',\r\n  ],\r\n  amber: [\r\n    '#FFF8E1',\r\n    '#FFECB3',\r\n    '#FFE082',\r\n    '#FFD54F',\r\n    '#FFCA28',\r\n    '#FFC107',\r\n    '#FFB300',\r\n    '#FFA000',\r\n    '#FF8F00',\r\n    '#FF6F00',\r\n    '#FFE57F',\r\n    '#FFD740',\r\n    '#FFC400',\r\n    '#FFAB00',\r\n  ],\r\n  orange: [\r\n    '#FFF3E0',\r\n    '#FFE0B2',\r\n    '#FFCC80',\r\n    '#FFB74D',\r\n    '#FFA726',\r\n    '#FF9800',\r\n    '#FB8C00',\r\n    '#F57C00',\r\n    '#EF6C00',\r\n    '#E65100',\r\n    '#FFD180',\r\n    '#FFAB40',\r\n    '#FF9100',\r\n    '#FF6D00',\r\n  ],\r\n  deepOrange: [\r\n    '#FBE9E7',\r\n    '#FFCCBC',\r\n    '#FFAB91',\r\n    '#FF8A65',\r\n    '#FF7043',\r\n    '#FF5722',\r\n    '#F4511E',\r\n    '#E64A19',\r\n    '#D84315',\r\n    '#BF360C',\r\n    '#FF9E80',\r\n    '#FF6E40',\r\n    '#FF3D00',\r\n    '#DD2C00',\r\n  ],\r\n  brown: [\r\n    '#EFEBE9',\r\n    '#D7CCC8',\r\n    '#BCAAA4',\r\n    '#A1887F',\r\n    '#8D6E63',\r\n    '#795548',\r\n    '#6D4C41',\r\n    '#5D4037',\r\n    '#4E342E',\r\n    '#3E2723',\r\n  ],\r\n  grey: [\r\n    '#FAFAFA',\r\n    '#F5F5F5',\r\n    '#EEEEEE',\r\n    '#E0E0E0',\r\n    '#BDBDBD',\r\n    '#9E9E9E',\r\n    '#757575',\r\n    '#616161',\r\n    '#424242',\r\n    '#212121',\r\n  ],\r\n  blueGrey: [\r\n    '#ECEFF1',\r\n    '#CFD8DC',\r\n    '#B0BEC5',\r\n    '#90A4AE',\r\n    '#78909C',\r\n    '#607D8B',\r\n    '#546E7A',\r\n    '#455A64',\r\n    '#37474F',\r\n    '#263238',\r\n  ],\r\n}"
+                }
             ]
         },
         "groupedFunctions": {
@@ -937,7 +1125,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 5,
+        "count": 4,
         "status": "low",
         "files": [
             {
@@ -1003,7 +1191,7 @@
                 "linktype": "component",
                 "name": "DayEventsDisplayComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/10",
                 "status": "low"
             },
             {
@@ -1020,6 +1208,15 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "UserPillComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/models/attendee.model.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Attendee",
                 "coveragePercent": 0,
                 "coverageCount": "0/4",
                 "status": "low"
@@ -1049,6 +1246,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "function",
                 "name": "isColorDark",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/materialColourSchemes.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "MATERIAL_COLOURS",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
